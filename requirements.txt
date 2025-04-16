@@ -1,0 +1,6 @@
+pandas
+streamlit
+matplotlib
+plotly
+streamlit-kpi
+streamlit_nested_layout

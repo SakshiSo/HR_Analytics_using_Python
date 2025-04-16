@@ -1,0 +1,12 @@
+[theme]
+primaryColor="#ff4d4d"  # Red accent
+backgroundColor="#003d4d"  # Deep Blue
+secondaryBackgroundColor="#002a3a"  # Darker Blue for contrast
+textColor="#ffffff"  # White text for readability
+font = "sans serif"
+
+[server]
+runOnSave = false
+headless = true
+
+

@@ -61,14 +61,7 @@ def compute_top_bottom_performers(df):
         db=db_config["database"]
     )
 
-    # query = """
-    #     SELECT EmployeeID, PerformanceRating, JobInvolvement, JobSatisfaction, PercentSalaryHike
-    #     FROM employee_dashboard
-    # """
     
-    # df = pd.read_sql(query, conn)
-    # conn.close()
-
     df = df[df['LastWorkingDay'].isnull()]
 
     if df.empty:

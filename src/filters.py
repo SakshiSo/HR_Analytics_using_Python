@@ -52,67 +52,6 @@ def __apply_filters(df, filter_elem, user_filters):
     return df.query(" and ".join(filter_conditions)) if filter_conditions else df
 
 
-### Internal Functions
-# def __build_filter_ui(df, filter_elem):
-#     """Creates filter UI in sidebar"""
-#     st.sidebar.markdown("# REPORT FILTERS")
-#     st.sidebar.markdown("---")
-
-#     # Reset filters if the user clicks 'Clear Filters'
-#     if st.sidebar.button("Clear Filters"):
-#         for key in filter_elem.keys():
-#             session_key = f"filter_{key.replace(' ', '_')}"
-            
-#             if key == "Active Employees":
-#                 st.session_state[session_key] = "All"  # Ensure valid default
-#             elif isinstance(filter_elem[key], list) and isinstance(filter_elem[key][0], str):
-#                 st.session_state[session_key] = []  # Clear categorical filters
-#             elif isinstance(filter_elem[key], list) and isinstance(filter_elem[key][0], (int, float)):
-#                 st.session_state[session_key] = (filter_elem[key][0], filter_elem[key][1])  # Reset range filters
-        
-#         st.sidebar.selectbox("Gender", ["All", "Male", "Female"], key="filter_Gender")
-#         st.rerun()  # Force UI refresh
-        
-#     st.sidebar.markdown("---")
-
-#     # Create a dictionary to store user-selected filters
-#     user_filters = {}
-
-#     # Iterate through filters and build UI
-#     for key, options in filter_elem.items():
-#         st.sidebar.markdown(f"**{key}**")  # Section title
-
-#         # Ensure unique key for each filter to avoid Streamlit errors
-#         unique_key = f"filter_{key.replace(' ', '_')}"
-
-#         # Special handling for "Active Employees"
-#         if key == "Active Employees":
-#             user_filters[key] = st.sidebar.radio(
-#                 "Show Active Employees?",
-#                 options=["All", "Yes", "No"],
-#                 index=0,  # Default to "All"
-#                 key=unique_key,
-#             )
-#         elif isinstance(options[0], str):  # Categorical Filters
-#             user_filters[key] = st.sidebar.multiselect(
-#                 f"Select {key}",
-#                 options=options,
-#                 default=st.session_state.get(unique_key, []),  # No default selection
-#                 key=unique_key,
-#             )
-#         else:  # Numeric Filters
-#             user_filters[key] = st.sidebar.slider(
-#                 f"Select {key} Range",
-#                 min_value=int(options[0]),
-#                 max_value=int(options[1]),
-#                 value=st.session_state.get(unique_key, (int(options[0]), int(options[1]))),
-#                 key=unique_key,
-#             )
-
-#         st.sidebar.markdown("---")  # Divider between filters
-
-#     return user_filters  # Return user-selected filters
-
 def __build_filter_ui(df, filter_elem):
     """Creates filter UI in sidebar"""
     st.sidebar.markdown("# REPORT FILTERS")

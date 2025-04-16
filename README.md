@@ -1,14 +1,17 @@
-💼 HR Analytics Dashboard
+💼 HR Analytics Dashboard:
+
 A data-driven web application to monitor and analyze employee performance, predict attrition risk, and provide HR insights using a role-based login system. Built using Streamlit, MySQL, and Python, this project enables HRs, Admins, and Employees to interact with data in real-time.
 
-📌 Overview
+📌 Overview:
+
 This HR Analytics system helps organizations keep track of employee performance and retention using interactive dashboards and predictive analytics. The system provides:
 - Department-wise and demographic insights
 - Attrition prediction for active employees
 - Role-based access (HR, Admin, Employee)
 - Real-time data updates through MySQL backend
 
-🎯 Objective
+🎯 Objective:
+
 To build a comprehensive HR Analytics Dashboard that:
 - Tracks key HR metrics such as attrition, performance rating, and promotions
 - Allows employees to enter and update their information
@@ -16,7 +19,8 @@ To build a comprehensive HR Analytics Dashboard that:
 - Predicts potential employee attrition using ML models
 - Provides HRs with data insights for better decision-making
 
-💡 Motivation
+💡 Motivation:
+
 Organizations today face major challenges in retaining top talent and identifying performance gaps. This project was inspired by the need to:
 - Leverage data analytics for better HR management
 - Digitize employee records and dashboards
@@ -24,18 +28,21 @@ Organizations today face major challenges in retaining top talent and identifyin
 - Enable predictive insights for proactive HR strategies
 
 🧰 Technologies Used:
+
 - Frontend: Streamlit
 - Backend: Python (Pandas, Plotly, Seaborn, Matplotlib, bcrypt, streamlit_kpi)
 - Database: MySQL (with pymysql connector)
 - Authentication: Role-based login system (HR, Admin, Employee)
 
-🗃️ Database Setup (MySQL)
+🗃️ Database Setup (MySQL):
+
 The project uses a MySQL database named hr_analytics which contains three tables:
 - user – Stores login credentials and user roles.
 - employee_details – Stores personal employee information.
 - employee_dashboard – Stores work-related details for analytics and predictions.
 
 🔧 Steps to Setup MySQL:
+
 Install MySQL Server if not already installed.
 - Windows: https://dev.mysql.com/downloads/installer/
 
@@ -126,6 +133,12 @@ CREATE TABLE employee_dashboard (
 - Dynamic fetching and transformation using Pandas + PyMySQL pipeline.
 
 🖼️ Screenshots & Demo
+![Login Page](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Login.png)
+![Admin Dashboard](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Admin%20Dashboard.png)
+![Employee Dashboard](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Employee%20Dashboard.png)
+![Summary Dashboard](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Summary%20Dashboard.png)
+![Attrition Prediction](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Attrition%20Prediction.png)
+![Top and Bottom Employee](https://github.com/SakshiSo/HR_Analytics_using_Python/blob/main/Images/Top%20and%20Bottom%20Employees.png)
 
 
 How to Run Locally
@@ -167,3 +180,28 @@ connection = pymysql.connect(
 streamlit run app.py
 or
 python.exe -m streamlit run app.py
+
+✅ requirements.txt
+List the essential libraries (already in your project, but summarize in the README too):
+streamlit
+pymysql
+pandas
+plotly
+seaborn
+matplotlib
+bcrypt
+
+pip install -r requirements.txt
+
+🙋‍♀️ Author
+**Sakshi Sonavane**  
+Final Year Computer Engineering  
+Mumbai University  
+
+📄 License
+This project is for educational purposes only. No commercial use is intended.
+
+📬 Contact
+For queries or contributions, feel free to reach out at:  
+📧 sonavanesakshi2002@gmail.com  
+📱 LinkedIn: [linkedin.com/in/sakshi-sonavane](https://www.linkedin.com/in/sakshi-sonavane/)

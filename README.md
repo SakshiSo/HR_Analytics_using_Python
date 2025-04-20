@@ -1,4 +1,4 @@
-💼 HR Analytics Dashboard:
+**💼 HR Analytics Dashboard:
 
 A data-driven web application to monitor and analyze employee performance, predict attrition risk, and provide HR insights using a role-based login system. Built using Streamlit, MySQL, and Python, this project enables HRs, Admins, and Employees to interact with data in real-time.
 
